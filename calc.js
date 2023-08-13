@@ -32,4 +32,12 @@ function operate(number1,operation,number2) {
         return divide(number1,number2);
     }
 }
-console.log(operate(4,'/',0));
+
+const screen = document.querySelector('#screen');
+
+const buttons = document.querySelectorAll('button');
+buttons.forEach(button => {
+    button.addEventListener('click',()=>{
+        screen.textContent += button.innerText;
+    })
+});
