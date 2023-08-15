@@ -63,7 +63,7 @@ numbers.forEach(number => {
 const equalTo = document.querySelector('.equals');
 
 equalTo.addEventListener('click', ()=> {
-    console.log(operate(parseInt(firstNumber),currentOperator,parseInt(secondNumber)));
+    console.log(operate(parseFloat(firstNumber),currentOperator,parseFloat(secondNumber)));
     clicked = false;
     firstNumber = '';
     secondNumber = '';
