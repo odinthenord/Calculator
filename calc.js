@@ -14,10 +14,11 @@ function divide(a,b) {
     return a/b;
 }
 
-let firstNumber = null;
-let secondNumber = null;
+let firstNumber = '';
+let secondNumber = '';
 let currentOperator = null;
 let clicked = false;
+//let userTyping = false;
 
 function operate(number1,operation,number2) {
     if(operation === '+') {
@@ -48,11 +49,12 @@ const numbers = document.querySelectorAll('.number');
 
 numbers.forEach(number => {
     number.addEventListener('click', () => {
+        //userTyping = true;
         if(clicked === true) {
-            secondNumber = parseInt(number.value);
+            secondNumber += number.value;
             console.log(`secondnumber: ${secondNumber}`);
         }else {
-            firstNumber = parseInt(number.value);
+            firstNumber += number.value;
             console.log(`firstnumber: ${firstNumber}`);
         }
     });
@@ -61,6 +63,8 @@ numbers.forEach(number => {
 const equalTo = document.querySelector('.equals');
 
 equalTo.addEventListener('click', ()=> {
-    console.log(operate(firstNumber,currentOperator,secondNumber));
+    console.log(operate(parseInt(firstNumber),currentOperator,parseInt(secondNumber)));
     clicked = false;
+    firstNumber = '';
+    secondNumber = '';
 });
