@@ -1,37 +1,18 @@
-function add(a,b) {
-    return a+b;
-}
-
-function subtract(a,b) {
-    return a-b;
-}
-
-function multiply(a,b) {
-    return a*b;
-}
-
-function divide(a,b) {
-    return a/b;
-}
-
 let firstNumber = '';
 let secondNumber = '';
 let currentOperator = null;
 let clicked = false;
-//let userTyping = false;
 
 function operate(number1,operation,number2) {
-    if(operation === '+') {
-        return add(number1,number2);
-    }
-    if(operation === '-') {
-        return subtract(number1,number2);
-    }
-    if(operation === '*') {
-        return multiply(number1,number2);
-    }
-    if(operation === '/') {
-        return divide(number1,number2);
+    switch(operation){
+        case '+':
+            return number1 + number2;
+        case '-':
+            return number1 - number2;
+        case '*':
+            return number1 * number2;
+        case '/':
+            return number1 / number2;
     }
 }
 
@@ -51,7 +32,6 @@ const display = document.querySelector('#screen');
 
 numbers.forEach(number => {
     number.addEventListener('click', () => {
-        //userTyping = true;
         if(clicked === true) {
             secondNumber += number.value;
             console.log(`secondnumber: ${secondNumber}`);
