@@ -3,31 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <script src="calc.js" defer></script>
+    <title>Calculator1</title>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="container">
+        <div id="previousDisplay"></div>
         <div id="currentDisplay"></div>
-        <div id="resultDisplay"></div>
-        <button class="number" value="9">9</button>
-        <button class="number" value="8">8</button>
-        <button class="number" value="7">7</button>
-        <button class="number" value="6">6</button>
-        <button class="number" value="5">5</button>
-        <button class="number" value="4">4</button>
-        <button class="number" value="3">3</button>
-        <button class="number" value="2">2</button>
-        <button class="number" value="1">1</button>
-        <button class="number" value="0">0</button>
-        <button class="operator" value="+">+</button>
-        <button class="operator" value="-">-</button>
-        <button class="operator" value="/">/</button>
-        <button class="operator" value="*">*</button>
-        <button class="equals" value="=">=</button>
-        <button class="number" value=".">.</button>
-        <button class="clear" value="clear">clear</button>
+        <div>
+            <div id="row1">
+                <button class="clear" value="clear">Clear</button>
+                <button id="delete">delete <i class="material-icons">backspace</i></button>
+            </div>
+            <div id="row2">
+                <button class="number" value="7">7</button>
+                <button class="number" value="8">8</button>
+                <button class="number" value="9">9</button>
+                <button class="operator" value="/">&divide</button>
+            </div>
+            <div id="row3">
+                <button class="number" value="4">4</button>
+                <button class="number" value="5">5</button>
+                <button class="number" value="6">6</button>
+                <button class="operator" value="*">&times</button>
+            </div>
+            <div id="row4">
+                <button class="number" value="1">1</button>
+                <button class="number" value="2">2</button>
+                <button class="number" value="3">3</button>
+                <button class="operator" value="-">-</button>
+            </div>
+            <div id="row5">
+                <button class="number" value="0">0</button>
+                <button class="dot" value=".">.</button>
+                <button class="equals" value="=">=</button>
+                <button class="operator" value="+">+</button>
+            </div>
+        </div>
     </div>
 </body>
 </html>
