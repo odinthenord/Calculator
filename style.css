@@ -1,0 +1,131 @@
+body {
+    font-family: Lato, sans-serif;
+    font-style: italic;
+}
+
+#container {
+    border: 2px solid black;
+    margin: 20px auto;
+    height: 500px;
+    width: 400px;
+    background-color: #c5c6d0;
+    border-radius: 10px;
+}
+#previousDisplay {
+    height: 50px;
+    border: 2px solid black;
+    border-bottom: none;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: right;
+    font-size: larger;
+    background-color: white;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+#currentDisplay{
+    height: 50px;
+    border: 2px solid black;
+    border-top: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+    font-size: xx-large;
+    background-color: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-weight: bolder;
+}
+button {
+    font-size: 25px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: none;
+    font-family: Lato, sans-serif;
+}
+button:hover {
+    cursor: pointer;
+}
+button.clear {
+    padding: 15px 40px;
+    color: white;
+    background-color: red;
+    opacity: 0.5;
+}
+button.clear:hover {
+    opacity: 1;
+}
+button#delete {
+    padding: 15px 40px;
+    color: white;
+    background-color: #da012d;
+    opacity: 0.5;
+}
+button#delete:hover {
+    opacity: 1;
+}
+button.operator {
+    background-color: #ff9500;
+    color: white;
+    opacity: 0.5;
+}
+button.operator:hover {
+    opacity: 1;
+}
+button.number {
+    background-color: white;
+}
+button.number:hover {
+    background-color: #7c6e7f;
+    color: white;
+}
+button.dot {
+    background-color: white;
+}
+button.dot:hover {
+    background-color: #7c6e7f;
+    color: white;
+}
+button.equals {
+    background-color: white;
+}
+button.equals:hover {
+    background-color: #7c6e7f;
+    color: white;
+}
+#row1 {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#row2 {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#row3 {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#row4 {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#row5 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+}
