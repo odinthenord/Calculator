@@ -12,7 +12,11 @@ function operate(number1,operation,number2) {
         case '*':
             return number1 * number2;
         case '/':
-            return number1 / number2;
+            if(number2 === 0){
+                return "can't divide by zero";
+            }else{
+                return number1 / number2;
+            }
     }
 }
 
@@ -23,23 +27,23 @@ operators.forEach(operator => {
         currentOperator = operator.value;
         console.log(currentOperator);
         clicked = true;
-        display.textContent = currentOperator;
+        currentDisplay.textContent = currentOperator;
     });
 });
 
 const numbers = document.querySelectorAll('.number');
-const display = document.querySelector('#screen');
+const currentDisplay = document.querySelector('#currentDisplay');
 
 numbers.forEach(number => {
     number.addEventListener('click', () => {
         if(clicked === true) {
             secondNumber += number.value;
             console.log(`secondnumber: ${secondNumber}`);
-            display.textContent = secondNumber;
+            currentDisplay.textContent = secondNumber;
         }else {
             firstNumber += number.value;
             console.log(`firstnumber: ${firstNumber}`);
-            display.textContent = firstNumber;
+            currentDisplay.textContent = firstNumber;
         }
     });
 });
@@ -53,13 +57,14 @@ equalTo.addEventListener('click', ()=> {
     firstNumber = result;
     console.log(`firstnumber: ${firstNumber}`);
     secondNumber = '';
-    display.textContent = result;
+    resultDisplay.textContent = firstNumber+' '+ currentOperator+' '+secondNumber+' '+result;
 });
 
 const clearScr = document.querySelector('.clear');
 
 clearScr.addEventListener('click', ()=> {
-    display.textContent = '';
+    currentDisplay.textContent = '';
+    resultDisplay.textContent = '';
     firstNumber = '';
     secondNumber = '';
     currentOperator = '';
